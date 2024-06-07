@@ -32,7 +32,7 @@ set-Content -Path $filepath'\'$namelog".csv" -Value 'Отправитель;те
 set-Content -Path $filepath'\'$namelog"Results.csv" -Value 'Отправитель;тема;Получатель;Найдено;Размер(МБ)'
 
 
-New-ComplianceSearch -Name $namelog -ExchangeLocation newsletters@stg.local -ContentMatchQuery "(Received:$((get-date).AddDays(-$date_start).ToString('yyyy-MM-dd'))..$((get-date).AddDays(-$date_to).ToString('yyyy-MM-dd')))"
+New-ComplianceSearch -Name $namelog -ExchangeLocation newsletters@domain.com -ContentMatchQuery "(Received:$((get-date).AddDays(-$date_start).ToString('yyyy-MM-dd'))..$((get-date).AddDays(-$date_to).ToString('yyyy-MM-dd')))"
 Start-ComplianceSearch -Identity $namelog
 $seach = Get-ComplianceSearch -Identity $namelog
 while ($seach.status -ne "Completed") {Start-Sleep -Seconds 15;$seach = Get-ComplianceSearch -Identity $namelog}
