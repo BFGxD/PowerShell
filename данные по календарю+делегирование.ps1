@@ -34,4 +34,4 @@ Get-MailboxFolderPermission -Identity $user | ft -AutoSize
 #add-MailboxFolderPermission -identity $cal -user $sec -AccessRights PublishingEditor
 
 #Доступ к почте
-Add-MailboxPermission -Identity $user -User $sec -AccessRights FullAccess -AutoMapping:$true -InheritanceType All
+№Add-MailboxPermission -Identity $user -User $sec -AccessRights FullAccess -AutoMapping:$true -InheritanceType All
