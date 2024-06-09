@@ -5,7 +5,7 @@ Add-PSSnapin Microsoft.Exchange.Management.PowerShell.SnapIn
 $servers = @('exchange01','exchange02','exchange03') 
 
 $kto = "" #кто писал
-$komu = "n.shetinkin@stroytransgaz.com" #кому писал
+$komu = "" #кому писал
 
 $date = 1 #сколько дней отступить для поиска, 1 - сегодня, макс число зависит от настроек сервера.
 
